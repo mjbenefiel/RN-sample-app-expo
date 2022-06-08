@@ -15,15 +15,18 @@ function GoalInput(props) {
 
   return (
     <Modal visible={props.visible} animationType="slide">
+
       <View style={styles.inputContainer}>
-      
-        <TextInput
-          multiline={true}
-          styles={styles.textInput}
-          placeholder="Your course goal"
-          onChangeText={goalInputHandler}
-          value={enteredGoalText}
-        />
+      <View>
+      <TextInput
+      multiline={true}
+      style={styles.textInput}
+      placeholder="Your course goal"
+      onChangeText={goalInputHandler}
+      value={enteredGoalText}
+    />
+      </View>
+
         <View style={styles.buttonContainer}>
         <View style={styles.button}>
         <Button title="Add Goal" onPress={addGoalHandler} />
@@ -47,23 +50,34 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center",
+    // alignItems: "center",
     marginBottom: 24,
+    padding: 16,
     borderBottomWidth: 1,
     borderBottomColor: "#cccccc",
+    alignSelf: 'stretch',
+    textAlign: 'center',
     
   },
   textInput: {
-    
+    borderWidth: 1,
+    borderColor: "#cccccc",
+    width: '100%',
+    padding: 8,
+    alignSelf: 'stretch',
+    // testtextAlign: 'center',
   },
 
   buttonContainer: {
       marginTop: 16,
-      flexDirection: 'row'
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center'
   },
 
   button: {
-      width: '30%',
-      marginHorizontal: 8
+      width: 100,
+      marginHorizontal: 8,
+      
   }
 });
