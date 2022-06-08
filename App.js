@@ -34,7 +34,7 @@ export default function App() {
     <View style={styles.appContainer}>
       <Button
         title="Add New Goal"
-        color="#5e0acc"
+        color="#66758f"
         onPress={startAddGoalHandler}
       />
       <GoalInput
